@@ -3,7 +3,7 @@
 import React from "react";
 import { useState } from "react";
 
-const card = () => {
+const Navbar = () => {
   const [joined, setJoined] = useState(false);
   const [id,setId] = useState(0);
 
@@ -85,4 +85,4 @@ const card = () => {
   );
 };
 
-export default card;
+export default Navbar;

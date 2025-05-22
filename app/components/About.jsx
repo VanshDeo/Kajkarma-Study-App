@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card5 = () => {
+const About = () => {
   return (
     <div>
       <div className="h-[350px] w-[250px] px-8 py-6 m-10 bg-white shadow-lg shadow-blue-200 rounded-3xl">
@@ -131,4 +131,4 @@ const Card5 = () => {
   );
 };
 
-export default Card5;
+export default About;

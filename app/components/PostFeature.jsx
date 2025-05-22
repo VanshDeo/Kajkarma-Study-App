@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Card3 = () => {
+const PostFeature = () => {
   return (
     <div>
       <div className="h-[150px] w-[660px] p-10 m-10 bg-white shadow-lg shadow-blue-200 rounded-3xl">
@@ -10,9 +10,7 @@ const Card3 = () => {
         <div className="flex justify-between">
           <div>
             <div className="mt-4 h-8 w-8 bg-gray-300 rounded-full"></div>
-            <p className="relative bottom-6 left-9 font-bold text-sm text-gray-500">
-              What's on your mind?
-            </p>
+            <input placeholder="What's on your mind?" className="relative bottom-7 left-9 font-bold text-sm text-gray-500 h-[25px] w-[400px] border-none outline-none" />
           </div>
           <div className="relative flex gap-4 top-6">
             <div>
@@ -64,4 +62,4 @@ const Card3 = () => {
   );
 };
 
-export default Card3;
+export default PostFeature;

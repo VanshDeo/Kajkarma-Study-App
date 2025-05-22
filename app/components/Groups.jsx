@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const Card2 = () => {
+const Groups = () => {
   const [id, setId] = useState(0);
 
   const arr_items = ['Study Group', 'Web Design', 'Digital Marketing']
@@ -43,4 +43,4 @@ const Card2 = () => {
   );
 };
 
-export default Card2;
+export default Groups;

@@ -1,8 +1,11 @@
+import React from 'react';
+import Navbar1 from '../components/Navbar1';
+
 export default function home() {
   return (
     <>
-        <div className="relative place-self-center top-1 rounded-3xl h-193 w-357 bg-gradient-to-br from-blue-100 to-blue-300">
-
+        <div className="min-h-screen w-full ">
+           <Navbar1></Navbar1>
         </div>
     </>
   );

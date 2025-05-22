@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card4 = () => {
+const SamplePost = () => {
   return (
     <div>
       <div className="h-[500px] w-[660px] px-9 py-4 m-10 bg-white shadow-lg shadow-blue-200 rounded-3xl">
@@ -95,9 +95,7 @@ const Card4 = () => {
         <div className="flex">
           <div className="mt-4 h-8 w-8 bg-gray-300 rounded-full"></div>
           <div className="relative flex justify-between top-3.5 left-3 rounded-xl h-9 w-140 bg-gray-100">
-            <p className="relative top-2 left-3 text-sm text-gray-400 font-bold">
-              Write your comment...
-            </p>
+            <input placeholder="Write your comment..." className="relative left-3 text-sm text-gray-400 font-bold w-[400px] border-none outline-none" />
             <div className="relative flex gap-2 top-1.5 right-3">
               <div>
                 <svg
@@ -142,4 +140,4 @@ const Card4 = () => {
   );
 };
 
-export default Card4;
+export default SamplePost;
