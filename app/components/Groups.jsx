@@ -9,7 +9,7 @@ const Groups = () => {
 
   return (
     <div>
-      <div className="h-[320px] w-[300px] p-10 m-10 bg-white shadow-lg shadow-blue-200 rounded-3xl">
+      <div className="h-[320px] w-[300px] p-10 mt-5 bg-white shadow-lg shadow-blue-200 rounded-3xl w-full">
         <h2 className="text-[20px] px-4">Groups</h2>
         <div>
           <svg
@@ -21,21 +21,23 @@ const Groups = () => {
           </svg>
         </div>
         <div className="px-4">
+          <ul>
             {arr_items.map((item, index) => (
-                <button
+                <li
                 key={index}
                 onClick={() => {
                   setId(index);
                 }}
-                className={`h-[35px] w-[150px] text-lg text-gray-500 hover:text-black rounded-full ${id===index?'bg-blue-100':'bg-white text-left'} transition-all duration-300`}
+                className={`h-[35px] w-[150px] text-lg text-gray-500 hover:text-black rounded-full ${id===index?'bg-blue-100 text-center':'bg-white'} transition-all duration-300`}
               >
                 {item}
-              </button>
+              </li>
             ))}
+            </ul>
           </div>
         <div className="mt-4 border-t-2 border-gray-300"></div>
 
-        <div className="p-4 mt-4">
+        <div className="p-4 mt-5 place-self-center">
             <button className="h-9 w-40 border-2 border-blue-400 text-blue-500 rounded-full hover:bg-blue-50 transition-all duration-300">Create New Group</button>
         </div>
     </div>

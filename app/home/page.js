@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar1 from '../components/Navbar1';
+import Navbar from '../components2/Navbar';
 
 export default function home() {
   return (
     <>
-        <div className="min-h-screen w-full ">
-           <Navbar1></Navbar1>
+        <div className="p-5 min-h-screen w-full ">
+            <Navbar></Navbar>
         </div>
     </>
   );

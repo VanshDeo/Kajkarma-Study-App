@@ -1,27 +1,67 @@
+"use client";
+
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Groups from "./components/Groups";
 import PostFeature from "./components/PostFeature";
 import SamplePost from "./components/SamplePost";
 import About from "./components/About";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  const [postData, setPostData] = useState([]);
+
+  const fetchPostData = async () => {
+    try {
+          const response = await fetch("https://kajkarma.onrender.com/api/posts");
+          if (!response.ok) {
+            alert("An unexpected error occured");
+            return;
+          }
+          const data = await response.json();
+          console.log(data);
+          
+          setPostData(data.posts)
+
+        } catch (error) {
+          console.error(`Error : ${error.message}`);
+        }
+  }
+
+  useEffect( () => {
+    fetchPostData();
+  },[] )
+
   return (
     <>
-    {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> */}
-    <Navbar></Navbar>
-    <div className="relative flex bottom-12">
-    <Groups></Groups>
-    <div className="relative right-10">
-    <PostFeature></PostFeature>
-    <SamplePost></SamplePost>
-    <SamplePost></SamplePost>
-    </div>
-    <div className="relative right-20 bottom-71">
-      <About></About>
-    </div>
-    </div>
-    {/* </div> */}
+      <div className="p-4 mx-auto">
+        <Navbar></Navbar>
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="lg:flex-col space-y-4">
+            <Groups></Groups>
+          </div>
+          <div className="">
+            <PostFeature></PostFeature>
+            {postData.map((item,index) => (
+              <SamplePost 
+                key={index}
+                username={item.user_id.username}
+                content={item.content}
+                imagePath={item.imagePath}
+                likes={item.likes}
+                shares={item.shares}
+                comments={item.comments}
+                saved={item.saved}
+                created_At={item.createdAt}
+              ></SamplePost>
+            ))}
+          </div>
+          <div className="relative bottom-63">
+            <About></About>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

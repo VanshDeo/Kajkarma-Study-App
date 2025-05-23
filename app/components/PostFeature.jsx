@@ -1,18 +1,69 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Image from "next/image";
 
 const PostFeature = () => {
+  const inputRef = useRef();
+
+  const post = async (post) => {
+    if (!post) {
+      return;
+    }
+    try {
+      const response = await fetch("https://kajkarma.onrender.com/api/posts", {
+        method: "POST",
+        body: post
+      });
+      if (!response.ok) {
+        alert("An unexpected error occured");
+        return;
+      } else {
+        alert("Post created successfully");
+      }
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error(`Error : ${error.message}`);
+    }
+  };
+
+  // const get = async () => {
+  //   try {
+  //     const response = await fetch("https://kajkarma.onrender.com/api/posts");
+  //     if (!response.ok) {
+  //       alert("An unexpected error occured");
+  //       return;
+  //     }
+  //     const data = await response.json();
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.error(`Error : ${error.message}`);
+  //   }
+  // };
+
   return (
     <div>
-      <div className="h-[150px] w-[660px] p-10 m-10 bg-white shadow-lg shadow-blue-200 rounded-3xl">
+      <div className="h-[150px] w-[660px] p-10 mt-5 bg-white shadow-lg shadow-blue-200 rounded-3xl w-full">
         <h2 className="text-[20px] text-gray-800">Post Something</h2>
         <div className="mt-4 border-t-2 border-gray-300"></div>
-        <div className="flex justify-between">
+        <div className="flex items-center justify-between gap-4">
           <div>
             <div className="mt-4 h-8 w-8 bg-gray-300 rounded-full"></div>
-            <input placeholder="What's on your mind?" className="relative bottom-7 left-9 font-bold text-sm text-gray-500 h-[25px] w-[400px] border-none outline-none" />
+            <input
+              ref={inputRef}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  const formData = new FormData();
+                  formData.append("content", inputRef.current.value);
+                  post(formData);
+                }
+              }}
+              placeholder="What's on your mind?"
+              className="relative bottom-7 left-9 font-bold text-sm text-gray-500 h-[25px] w-full border-none outline-none"
+            />
           </div>
-          <div className="relative flex gap-4 top-6">
+          <div className="relative flex gap-2">
             <div>
               <svg
                 version="1.1"

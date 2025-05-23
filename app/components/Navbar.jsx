@@ -19,8 +19,8 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="h-[250px] w-[1000px] m-10 bg-white shadow-lg shadow-blue-200 rounded-3xl">
-        <div className="relative h-[100px] w-[1000px] bg-gradient-to-r from-blue-500 to-blue-400 rounded-t-3xl">
+      <div className="h-[250px] w-[1410px] bg-white shadow-lg shadow-blue-200 rounded-3xl">
+        <div className="relative h-[100px] w-[1410px] bg-gradient-to-r from-blue-500 to-blue-400 rounded-t-3xl">
           <button className="absolute top-8 left-6 bg-white p-2 rounded-full shadow-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"

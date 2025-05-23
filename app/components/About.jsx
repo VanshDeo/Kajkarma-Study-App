@@ -3,24 +3,24 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <div className="h-[350px] w-[250px] px-8 py-6 m-10 bg-white shadow-lg shadow-blue-200 rounded-3xl">
+      <div className="h-[350px] w-[250px] px-8 py-6 mt-70 bg-white shadow-lg shadow-blue-200 rounded-3xl w-full">
         <h2 className="text-[20px]">About</h2>
-        <div className="relative left-13 bottom-2 mt-4 h-20 w-20 bg-gray-300 rounded-full"></div>
-        <p className="relative left-11 text-lg ">Study Group</p>
-        <p className="relative left-3 text-[13px] text-gray-500">
+        <div className="relative bottom-2 mt-4 h-20 w-20 place-self-center bg-gray-300 rounded-full"></div>
+        <p className="relative text-lg place-self-center">Study Group</p>
+        <p className="relative text-[13px] text-gray-500 place-self-center">
           Private group,20 members
         </p>
-        <p className="relative top-2 left-3 text-[15px] text-gray-600">
+        <p className="relative top-2 text-[15px] text-gray-600 place-self-center">
           A place to study, share notes, and collaborate with peers.
         </p>
-        <div>
-          <button className="relative top-7 left-10 h-8 w-25 border-2 border-blue-400 text-blue-400 rounded-full hover:bg-blue-50 transition-all duration-300">
+        <div className="place-self-center">
+          <button className="relative top-7 h-8 w-25 border-2 border-blue-400 text-blue-400 rounded-full hover:bg-blue-50 transition-all duration-300">
             Edit About
           </button>
         </div>
       </div>
 
-      <div className="relative bottom-2 h-[200px] w-[250px] px-8 py-6 m-10 bg-white shadow-lg shadow-blue-200 rounded-3xl">
+      <div className="relative bottom-2 h-[200px] w-[250px] px-8 py-6 mt-5 bg-white shadow-lg shadow-blue-200 rounded-3xl w-full">
         <h2 className="text-[20px]">Resources</h2>
         <div className="flex justify-between relative top-5">
           <div className="flex gap-2">
@@ -105,14 +105,16 @@ const About = () => {
         </div>
       </div>
 
-      <div className="relative bottom-3 h-[80px] w-[250px] px-8 py-6 m-10 bg-white shadow-lg shadow-blue-200 rounded-3xl">
+      <div className="relative bottom-3 h-[80px] w-[250px] px-8 py-6 mt-5 bg-white shadow-lg shadow-blue-200 rounded-3xl w-full">
 
-        <div className="flex ">
+        <div className="flex justify-between">
+          <div>
           <div className="w-8 h-8 border-2 border-white bg-blue-400 rounded-full"></div>
-          <div className="relative right-3 border-2 border-white w-8 h-8 bg-blue-400 rounded-full"></div>
-          <div className="relative right-6 border-2 border-white w-8 h-8 bg-blue-400 rounded-full"></div>
-          <div className="relative right-9 top-5 border-1 border-white w-3 h-3 bg-green-400 rounded-full"></div>
-          <p className="relative top-1 right-5 text-gray-500">Online</p>
+          <div className="relative bottom-8 left-4 border-2 border-white w-8 h-8 bg-blue-400 rounded-full"></div>
+          <div className="relative bottom-16 left-8 border-2 border-white w-8 h-8 bg-blue-400 rounded-full"></div>
+          <div className="relative  bottom-19 left-13 border-1 border-white w-3 h-3 bg-green-400 rounded-full"></div>
+          <p className="relative bottom-26 left-18 text-gray-500">Online</p>
+          </div>
 
           <div>
             <svg
