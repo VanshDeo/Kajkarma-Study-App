@@ -11,7 +11,7 @@ const PostFeature = () => {
       return;
     }
     try {
-      const response = await fetch("https://kajkarma.onrender.com/api/posts", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_KAJKARMA_URL}/posts`, {
         method: "POST",
         body: post
       });

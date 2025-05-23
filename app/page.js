@@ -14,7 +14,7 @@ export default function Home() {
 
   const fetchPostData = async () => {
     try {
-          const response = await fetch("https://kajkarma.onrender.com/api/posts");
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_KAJKARMA_URL}/posts`);
           if (!response.ok) {
             alert("An unexpected error occured");
             return;
